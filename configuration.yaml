@@ -1,0 +1,60 @@
+# HA-Awesome Integrations (HACS)
+hacs:
+  token: fc56b73c1e97d5ce50b9b1589347d111a0c4a0ae
+  sidepanel_title: Community
+  sidepanel_icon: "mdi:alpha-c-box"
+  appdaemon: false
+  python_script: false
+  theme: true
+
+discovery:
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+frontend:
+  # Themes
+  themes:
+    happy:
+      primary color: pink
+    sad:
+      primary color: blue
+    # Material Dark Theme (Customizable Accent Color)
+    dark:
+      accent: "#FF4081"
+      # background
+      primary-background-color: "#121212"
+      # text
+      primary-text-color: "#FFFFDE"
+      secondary-text-color: "#FFFFFF99"
+      disabled-text-color: "#FFFFFF61"
+      sidebar-selected-text-color: "var(--accent)"
+      # card
+      card-background-color: "#1D1D1D"
+      paper-card-background-color: "#1D1D1D"
+      # colors
+      primary-color: "#1D1D1D"
+      secondary-background-color: "#1D1D1D"
+      accent-color: "var(--accent)"
+      dark-primary-color: "var(--accent)"
+      light-primary-color: "var(--accent)"
+      # controls
+      toggle-button-color: "var(--accent)"
+      paper-toggle-button-checked-button-color: "var(--accent)"
+      paper-toggle-button-checked-bar-color: "var(--accent)"
+ 
+# TP Link Switches
+tplink:
+  switch:
+    - host: 10.0.0.142 
+    - host: 10.0.0.198
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+http:
+  base_url: example.duckdns.org:8123
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
