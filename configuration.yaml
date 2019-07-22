@@ -1,6 +1,7 @@
 # HA-Awesome Integrations (HACS)
 hacs:
-  token: fc56b73c1e97d5ce50b9b1589347d111a0c4a0ae
+  # enter token from github.com/settings/token
+  # token: [enter own token here]
   sidepanel_title: Community
   sidepanel_icon: "mdi:alpha-c-box"
   appdaemon: false
@@ -44,8 +45,8 @@ frontend:
 # TP Link Switches
 tplink:
   switch:
-    - host: 10.0.0.142 
-    - host: 10.0.0.198
+    - host: 10.0.0.0
+    - host: 10.0.0.0
 
 # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
 http:
